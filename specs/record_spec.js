@@ -1,0 +1,13 @@
+var assert = require('assert')
+var Record = require('../record.js')
+
+describe('Record',function(){
+
+  beforeEach(){
+    record = new Record('StrangeLove','Depeche Mode','Electronic',12)
+  }
+
+  it('should have a title',function(){
+    assert.strictEqual('StrangeLove',record.title)
+  })
+})
