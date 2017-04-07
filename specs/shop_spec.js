@@ -82,4 +82,13 @@ describe('Record Store',function(){
 
   })
 
+  it('should be able to display the value of the inventory with multiple items',function(){
+    
+    theSingingCricket.add(karmaChameleon)
+    theSingingCricket.add(theJubilee)
+    theSingingCricket.add(strangeLove)
+
+    assert.strictEqual("Inventory value: 27.",theSingingCricket.inventoryValue())
+  })
+
 })
