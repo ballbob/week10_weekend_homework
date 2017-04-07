@@ -20,4 +20,8 @@ describe('Collector',function(){
   it('should have a name',function(){
     assert.strictEqual('Jimmy',jimmy.name)
   })
+
+  it('should start with an empty library',function(){
+    assert.strictEqual(undefined,jimmy.library[0])
+  })
 })
