@@ -12,12 +12,11 @@ Collector.prototype = {
   remove: function(recordToRemove){
     this.library.forEach(function(record){
       if (record.name === recordToRemove.name){
-        console.log(record)
         var recordIndex = this.library.indexOf(record)
         this.library.splice(recordIndex,1)
       }
     }.bind(this))
-  }
+  },
 }
 
 module.exports = Collector
