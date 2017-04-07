@@ -3,9 +3,11 @@ var Record = require('../record.js')
 
 describe('Record',function(){
 
-  beforeEach(){
+  var record
+
+  beforeEach(function(){
     record = new Record('StrangeLove','Depeche Mode','Electronic',12)
-  }
+  })
 
   it('should have a title',function(){
     assert.strictEqual('StrangeLove',record.title)
