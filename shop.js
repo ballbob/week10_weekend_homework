@@ -9,14 +9,13 @@ Shop.prototype = {
     this.discs.push(record)
   },
 
-  remove: function(record){
-    this.discs.forEach(function(disc){
-      if (disc === record){
-        this.discs.remove(disc)
-      }else{
-        return
+  remove: function(discToRemove){
+    this.discs.forEach(function(record){
+      if (record.name === discToRemove.name){
+        var recordIndex = this.discs.indexOf(record)
+        this.discs.splice(recordIndex,1)
       }
-    })
+    }.bind(this))
   }
 }
 

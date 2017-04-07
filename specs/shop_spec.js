@@ -4,7 +4,7 @@ var Shop = require('../shop.js')
 
 describe('Record Store',function(){
 
-  var strangelove
+  var strangeLove
   var karmaChameleon
   var theJubilee
   var theSingingCricket
@@ -35,9 +35,14 @@ describe('Record Store',function(){
     assert.strictEqual(theJubilee,theSingingCricket.discs[0])
 
     })
+
   it('should be able to remove a record from the inventory',function(){
-    theSingingCricket.add(strangelove)
-    theSingingCricket.remove(strangelove)
+    
+    theSingingCricket.add(theJubilee)
+    theSingingCricket.remove(theJubilee)
+    
     assert.strictEqual(undefined,theSingingCricket.discs[0])
+  
   })
+
 })
