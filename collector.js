@@ -4,4 +4,10 @@ var Collector = function(name, money){
   this.library = []
 }
 
+Collector.prototype = {
+  add: function(record){
+    this.library.push(record)
+  }
+}
+
 module.exports = Collector
