@@ -12,4 +12,8 @@ describe('Record',function(){
   it('should have a title',function(){
     assert.strictEqual('StrangeLove',record.title)
   })
+
+  it('should have an artist',function(){
+    assert.strictEqual('Depeche Mode',record.artist)
+  })
 })
