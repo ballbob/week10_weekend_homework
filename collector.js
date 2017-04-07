@@ -17,6 +17,12 @@ Collector.prototype = {
       }
     }.bind(this))
   },
+
+  buy: function(shop,record){
+    this.add(record)
+    this.money -= record.price
+    shop.sell(record)
+  }
 }
 
 module.exports = Collector
