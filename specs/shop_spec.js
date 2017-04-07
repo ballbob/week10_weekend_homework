@@ -58,7 +58,16 @@ describe('Record Store',function(){
 
   it('should be able to print its inventory as a string with one disc',function(){
     theSingingCricket.add(theJubilee)
-    assert.strictEqual("Disc: 'The Jubilee' by Mary Chapin Carpenter. Genre: Folk. Price: 10.",theSingingCricket.printInventory())
+    assert.strictEqual("Disc: 'The Jubilee' by Mary Chapin Carpenter. Genre: Folk. Price: 10. ",theSingingCricket.printInventory())
+  })
+
+  it('should be able to print its inventory as a string with multiple items in the inventory',function(){
+    
+    theSingingCricket.add(karmaChameleon)
+    theSingingCricket.add(theJubilee)
+    theSingingCricket.add(strangeLove)
+
+    assert.strictEqual("Disc: 'Karma Chameleon' by Culture Club. Genre: Pop. Price: 5. Disc: 'The Jubilee' by Mary Chapin Carpenter. Genre: Folk. Price: 10. Disc: 'StrangeLove' by Depeche Mode. Genre: Electronic. Price: 12. ",theSingingCricket.printInventory())
   })
 
 })

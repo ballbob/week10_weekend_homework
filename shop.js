@@ -29,8 +29,7 @@ Shop.prototype = {
       return "There are no discs."
     }else{
       this.discs.forEach(function(record){
-        console.log(record)
-        inventoryString += "Disc: " + record.allDeets()
+        inventoryString += "Disc: " + record.allDeets() + " "
       })
       return inventoryString
     }
