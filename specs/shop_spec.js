@@ -70,4 +70,11 @@ describe('Record Store',function(){
     assert.strictEqual("Disc: 'Karma Chameleon' by Culture Club. Genre: Pop. Price: 5. |||Disc: 'The Jubilee' by Mary Chapin Carpenter. Genre: Folk. Price: 10. |||Disc: 'StrangeLove' by Depeche Mode. Genre: Electronic. Price: 12. |||",theSingingCricket.printInventory())
   })
 
+  it('should be able to sell a record',function(){
+    theSingingCricket.add(strangeLove)
+    theSingingCricket.sell(strangeLove)
+
+    assert.strictEqual(112,theSingingCricket.balance)
+  })
+
 })

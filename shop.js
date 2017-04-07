@@ -33,6 +33,15 @@ Shop.prototype = {
       })
       return inventoryString
     }
+  },
+
+  sell: function(recordToSell){
+    this.discs.forEach(function(record){
+      if (record.name === recordToSell.name){
+        this.balance += recordToSell.price
+      }
+    }.bind(this))
+    this.remove(recordToSell)
   }
 }
 
