@@ -33,5 +33,11 @@ describe('Record Store',function(){
   it('should be able to add to the inventory',function(){
     theSingingCricket.add(theJubilee)
     assert.strictEqual(theJubilee,theSingingCricket.discs[0])
+
+    })
+  it('should be able to remove a record from the inventory',function(){
+    theSingingCricket.add(strangelove)
+    theSingingCricket.remove(strangelove)
+    assert.strictEqual(undefined,theSingingCricket.discs[0])
   })
 })

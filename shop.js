@@ -7,6 +7,16 @@ var Shop = function(name,city){
 Shop.prototype = {
   add: function(record){
     this.discs.push(record)
+  },
+
+  remove: function(record){
+    this.discs.forEach(function(disc){
+      if (disc === record){
+        this.discs.remove(disc)
+      }else{
+        return
+      }
+    })
   }
 }
 
