@@ -17,6 +17,10 @@ Shop.prototype = {
         this.discs.splice(recordIndex,1)
       }
     }.bind(this))
+  },
+
+  printNameAndCity: function(){
+    return "The shop's name is '" + this.name + "' in " + this.city + "."
   }
 
 
