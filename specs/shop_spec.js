@@ -25,4 +25,8 @@ describe('Record Store',function(){
   it('should have a city',function(){
     assert.strictEqual('Bridge of Allan',theSingingCricket.city)
   })
+
+  it('should start with an empty inventory',function(){
+    assert.strictEqual(undefined,theSingingCricket.discs[0])
+  })
 })
