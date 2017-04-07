@@ -21,4 +21,8 @@ describe('Record Store',function(){
   it('should have a name',function(){
     assert.strictEqual('The Singing Cricket',theSingingCricket.name)
   })
+
+  it('should have a city',function(){
+    assert.strictEqual('Bridge of Allan',theSingingCricket.city)
+  })
 })
