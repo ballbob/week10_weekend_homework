@@ -16,4 +16,8 @@ describe('Record',function(){
   it('should have an artist',function(){
     assert.strictEqual('Depeche Mode',record.artist)
   })
+
+  it('should have a genre',function(){
+    assert.strictEqual('Electronic',record.genre)
+  })
 })
