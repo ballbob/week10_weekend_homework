@@ -13,8 +13,14 @@ describe('Collector',function(){
     personalJesus = new Record('Personal Jesus', 'Depeche Mode', 'Electronic', 12)
     karmaChameleon = new Record('Karma Chameleon','Culture Club','Pop',5)
     theJubilee = new Record('The Jubilee','Mary Chapin Carpenter','Folk',10)
+    istanbul = new Record('Istanbul (Not Constantinople', 'They Might be Giants','Nerd',12)
 
     theSingingCricket = new Shop('The Singing Cricket','Bridge of Allan',100)
+
+    theSingingCricket.add(strangeLove)
+    theSingingCricket.add(personalJesus)
+    theSingingCricket.add(karmaChameleon)
+    theSingingCricket.add(theJubilee)
   })
 
   it('should have a name',function(){
@@ -27,5 +33,11 @@ describe('Collector',function(){
 
   it('should begin with specified money',function(){
     assert.strictEqual(30,jimmy.money)
+  })
+
+  it('should be able to add a record',function(){
+    jimmy.add(istanbul)
+
+    assert.strictEqual(istanbul,jimmy.library[0])
   })
 })
