@@ -5,4 +5,11 @@ var Record = function(title,artist,genre,price){
   this.price = price
 }
 
+Record.prototype = {
+
+  allDeets: function(){
+    return "'" + this.title + "' by " + this.artist + ". " + this.genre + ". " + this.price + "."
+  }
+}
+
 module.exports = Record

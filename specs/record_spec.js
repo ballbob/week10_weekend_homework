@@ -24,4 +24,8 @@ describe('Record',function(){
   it('should have a price',function(){
     assert.strictEqual(12,record.price)
   })
+
+  it('should be able to return its details as a string',function(){
+    assert.strictEqual("'StrangeLove' by Depeche Mode. Electronic. 12.",record.allDeets())
+  })
 })
