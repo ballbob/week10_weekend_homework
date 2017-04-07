@@ -29,4 +29,9 @@ describe('Record Store',function(){
   it('should start with an empty inventory',function(){
     assert.strictEqual(undefined,theSingingCricket.discs[0])
   })
+
+  it('should be able to add to the inventory',function(){
+    theSingingCricket.add(theJubilee)
+    assert.strictEqual(theJubilee,theSingingCricket.discs[0])
+  })
 })
