@@ -21,6 +21,16 @@ Shop.prototype = {
 
   printNameAndCity: function(){
     return "The shop's name is '" + this.name + "' in " + this.city + "."
+  },
+
+  printInventory: function(){
+    if (this.discs[0] === undefined){
+      return "There are no discs."
+    }else{
+      this.discs.forEach(function(record){
+        return "Disc" + indexOf(record) + ": " + record.allDeets
+      }.bind(this))
+    }
   }
 
 

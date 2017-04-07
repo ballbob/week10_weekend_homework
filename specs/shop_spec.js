@@ -52,4 +52,8 @@ describe('Record Store',function(){
     assert.strictEqual("The shop's name is 'The Singing Cricket' in Bridge of Allan.",theSingingCricket.printNameAndCity())
   })
 
+  it('should be able to print its inventory as a string with 0 discs',function(){
+    assert.strictEqual("There are no discs.",theSingingCricket.printInventory())
+  })
+
 })
