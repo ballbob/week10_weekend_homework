@@ -24,4 +24,8 @@ describe('Collector',function(){
   it('should start with an empty library',function(){
     assert.strictEqual(undefined,jimmy.library[0])
   })
+
+  it('should begin with specified money',function(){
+    assert.strictEqual(30,jimmy.money)
+  })
 })
