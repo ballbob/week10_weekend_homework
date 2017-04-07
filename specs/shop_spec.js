@@ -48,8 +48,8 @@ describe('Record Store',function(){
     assert.strictEqual(100,theSingingCricket.balance)
   })
 
-  it('should be able to print its properties as a string when inventory empty',function(){
-    assert.strictEqual("This store is 'The Singing Cricket' in Bridge of Allan. It has no discs in its inventory.",theSingingCricket.allProperties)
+  it('should be able to print its name and location',function(){
+    assert.strictEqual("The shop's name is 'The Singing Cricket' in Bridge of Allan.",theSingingCricket.printNameAndCity())
   })
 
 })
