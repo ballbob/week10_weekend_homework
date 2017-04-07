@@ -42,6 +42,14 @@ Shop.prototype = {
       }
     }.bind(this))
     this.remove(recordToSell)
+  },
+
+  inventoryValue: function(){
+    invVal = 0
+    this.discs.forEach(function(record){
+      invVal += record.price
+    })
+    return "Inventory value: " +invVal + "."
   }
 }
 

@@ -77,4 +77,9 @@ describe('Record Store',function(){
     assert.strictEqual(112,theSingingCricket.balance)
   })
 
+  it('should be able to display the value of the inventory with no items',function(){
+    assert.strictEqual("Inventory value: 0.",theSingingCricket.inventoryValue())
+
+  })
+
 })
