@@ -1,7 +1,8 @@
-var Shop = function(name,city){
+var Shop = function(name,city,balance){
   this.name = name
   this.city = city
   this.discs = []
+  this.balance = balance
 }
 
 Shop.prototype = {
@@ -18,7 +19,7 @@ Shop.prototype = {
     }.bind(this))
   }
 
-  
+
 }
 
 module.exports = Shop

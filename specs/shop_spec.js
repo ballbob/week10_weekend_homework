@@ -15,7 +15,7 @@ describe('Record Store',function(){
     karmaChameleon = new Record('Karma Chameleon','Culture Club','Pop',5)
     theJubilee = new Record('The Jubilee','Mary Chapin Carpenter','Folk',10)
 
-    theSingingCricket = new Shop('The Singing Cricket','Bridge of Allan')
+    theSingingCricket = new Shop('The Singing Cricket','Bridge of Allan',100)
   })
 
   it('should have a name',function(){
