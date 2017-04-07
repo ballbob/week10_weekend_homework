@@ -50,7 +50,11 @@ describe('Collector',function(){
 
   it('should display a record in its inventory on buying from a shop',function(){
     jimmy.buy(theSingingCricket,theJubilee)
-    
     assert.strictEqual(theJubilee,jimmy.library[0])
+  })
+
+  it('should lose the price of the record from its money on buying it',function(){
+    jimmy.buy(theSingingCricket,theJubilee)
+    assert.strictEqual(20,jimmy.money)
   })
 })
