@@ -20,4 +20,8 @@ describe('Record',function(){
   it('should have a genre',function(){
     assert.strictEqual('Electronic',record.genre)
   })
+
+  it('should have a price',function(){
+    assert.strictEqual(12,record.price)
+  })
 })
