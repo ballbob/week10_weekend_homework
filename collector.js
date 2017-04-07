@@ -1,5 +1,6 @@
-var Collector = function(name){
+var Collector = function(name, money){
   this.name = name
+  this.money = money
   this.library = []
 }
 
