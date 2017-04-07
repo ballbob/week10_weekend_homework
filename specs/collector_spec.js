@@ -40,4 +40,11 @@ describe('Collector',function(){
 
     assert.strictEqual(istanbul,jimmy.library[0])
   })
+
+  it('should be able to remove a record',function(){
+    jimmy.add(istanbul)
+    jimmy.remove(istanbul)
+
+    assert.strictEqual(undefined,jimmy.library[0])
+  })
 })
