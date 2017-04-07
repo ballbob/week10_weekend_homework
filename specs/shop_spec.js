@@ -91,4 +91,12 @@ describe('Record Store',function(){
     assert.strictEqual("Inventory value: 27.",theSingingCricket.inventoryValue())
   })
 
+  it('should be able to display its finances',function(){
+    theSingingCricket.add(karmaChameleon)
+    theSingingCricket.add(theJubilee)
+    theSingingCricket.add(strangeLove)
+
+    assert.strictEqual("Shop balance: 100. Inventory value: 27.",theSingingCricket.finances())
+  })
+
 })

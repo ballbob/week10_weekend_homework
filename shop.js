@@ -50,6 +50,10 @@ Shop.prototype = {
       invVal += record.price
     })
     return "Inventory value: " +invVal + "."
+  },
+
+  finances: function(){
+    return "Shop balance: " + this.balance + ". " + this.inventoryValue()
   }
 }
 
