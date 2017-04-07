@@ -7,6 +7,16 @@ var Collector = function(name, money){
 Collector.prototype = {
   add: function(record){
     this.library.push(record)
+  },
+
+  remove: function(recordToRemove){
+    this.library.forEach(function(record){
+      if (record.name === recordToRemove.name){
+        console.log(record)
+        var recordIndex = this.library.indexOf(record)
+        this.library.splice(recordIndex,1)
+      }
+    }.bind(this))
   }
 }
 
