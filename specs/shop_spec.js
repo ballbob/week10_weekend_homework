@@ -56,4 +56,9 @@ describe('Record Store',function(){
     assert.strictEqual("There are no discs.",theSingingCricket.printInventory())
   })
 
+  it('should be able to print its inventory as a string with one disc',function(){
+    theSingingCricket.add(theJubilee)
+    assert.strictEqual("Disc: 'The Jubilee' by Mary Chapin Carpenter. Genre: Folk. Price: 10.",theSingingCricket.printInventory())
+  })
+
 })

@@ -24,16 +24,17 @@ Shop.prototype = {
   },
 
   printInventory: function(){
+    var inventoryString = ""
     if (this.discs[0] === undefined){
       return "There are no discs."
     }else{
       this.discs.forEach(function(record){
-        return "Disc" + indexOf(record) + ": " + record.allDeets
-      }.bind(this))
+        console.log(record)
+        inventoryString += "Disc: " + record.allDeets()
+      })
+      return inventoryString
     }
   }
-
-
 }
 
 module.exports = Shop
