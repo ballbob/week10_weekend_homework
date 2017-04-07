@@ -8,7 +8,7 @@ var Record = function(title,artist,genre,price){
 Record.prototype = {
 
   allDeets: function(){
-    return "'" + this.title + "' by " + this.artist + ". Genre: " + this.genre + ". Price: " + this.price + "."
+    return "'" + this.title + "' by " + this.artist + ". Genre: " + this.genre + ". Price: " + this.price + ". "
   }
 }
 

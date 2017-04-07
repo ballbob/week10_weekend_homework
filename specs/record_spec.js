@@ -26,6 +26,6 @@ describe('Record',function(){
   })
 
   it('should be able to return its details as a string',function(){
-    assert.strictEqual("'StrangeLove' by Depeche Mode. Genre: Electronic. Price: 12.",record.allDeets())
+    assert.strictEqual("'StrangeLove' by Depeche Mode. Genre: Electronic. Price: 12. ",record.allDeets())
   })
 })

@@ -7,11 +7,13 @@ describe('Record Store',function(){
   var strangeLove
   var karmaChameleon
   var theJubilee
+  var personalJesus
   var theSingingCricket
 
   beforeEach(function(){
 
     strangeLove = new Record('StrangeLove','Depeche Mode','Electronic',12)
+    personalJesus = new Record('Personal Jesus', 'Depeche Mode', 'Electronic', 12)
     karmaChameleon = new Record('Karma Chameleon','Culture Club','Pop',5)
     theJubilee = new Record('The Jubilee','Mary Chapin Carpenter','Folk',10)
 
@@ -97,6 +99,22 @@ describe('Record Store',function(){
     theSingingCricket.add(strangeLove)
 
     assert.strictEqual("Shop balance: 100. Inventory value: 27.",theSingingCricket.finances())
+  })
+
+  it('should be able to view all records of a genre',function(){
+    theSingingCricket.add(theJubilee)
+    theSingingCricket.add(strangeLove)
+    theSingingCricket.add(personalJesus)
+
+    assert.equal("'StrangeLove' by Depeche Mode. Genre: Electronic. Price: 12. 'Personal Jesus' by Depeche Mode. Genre: Electronic. Price: 12. ", theSingingCricket.genre('Electronic'))
+  })
+
+  it('should be able to display single record when searching by genre',function(){
+    theSingingCricket.add(theJubilee)
+    theSingingCricket.add(strangeLove)
+    theSingingCricket.add(personalJesus)
+
+    assert.equal("'The Jubilee' by Mary Chapin Carpenter. Genre: Folk. Price: 10. ", theSingingCricket.genre('Folk'))
   })
 
 })

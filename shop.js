@@ -29,7 +29,7 @@ Shop.prototype = {
       return "There are no discs."
     }else{
       this.discs.forEach(function(record){
-        inventoryString += "Disc: " + record.allDeets() + " |||"
+        inventoryString += "Disc: " + record.allDeets() + "|||"
       })
       return inventoryString
     }
@@ -54,6 +54,16 @@ Shop.prototype = {
 
   finances: function(){
     return "Shop balance: " + this.balance + ". " + this.inventoryValue()
+  },
+
+  genre: function(genre){
+    songsString = ""
+    this.discs.forEach(function(record){
+      if(record.genre === genre){
+        songsString += record.allDeets()
+      }
+    })
+    return songsString
   }
 }
 
