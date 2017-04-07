@@ -17,6 +17,8 @@ Shop.prototype = {
       }
     }.bind(this))
   }
+
+  
 }
 
 module.exports = Shop

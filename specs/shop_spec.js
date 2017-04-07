@@ -42,7 +42,10 @@ describe('Record Store',function(){
     theSingingCricket.remove(theJubilee)
     
     assert.strictEqual(undefined,theSingingCricket.discs[0])
-  
+  })
+
+  it('should have a balance',function(){
+    assert.strictEqual(100,theSingingCricket.balance)
   })
 
 })
