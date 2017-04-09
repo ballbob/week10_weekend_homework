@@ -77,4 +77,13 @@ describe('Collector',function(){
 
     assert.strictEqual(12,jimmy.genreValue('Electronic'))
   })
+
+  it('should be able to show the value of records of a certain genre with multiple records of it',function(){
+    jammy = new Collector('Jammy',200)
+    jammy.add(strangeLove)
+    jammy.add(personalJesus)
+    jammy.add(theJubilee)
+
+    assert.strictEqual(24,jammy.genreValue('Electronic'))
+  })
 })
