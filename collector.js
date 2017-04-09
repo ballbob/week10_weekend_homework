@@ -29,6 +29,14 @@ Collector.prototype = {
         this.remove(recordToRemove)
       }
     }.bind(this))
+  },
+
+  libraryValue: function(){
+    value = 0
+    this.library.forEach(function(record){
+      value += record.price
+    })
+    return value
   }
 
 }
