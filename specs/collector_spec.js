@@ -86,4 +86,15 @@ describe('Collector',function(){
 
     assert.strictEqual(24,jammy.genreValue('Electronic'))
   })
+
+  it('should be able to view its most valuable record',function(){
+    badRomance = new Record('Bad Romance','Lady Gaga','Pop',2000000000)
+    godaloda = new Collector('Goda Loda Welf',2000000000000000000000)
+
+    godaloda.add(strangeLove)
+    godaloda.add(theJubilee)
+    godaloda.add(badRomance)
+
+    assert.strictEqual(badRomance,godaloda.mostValuableRecord())
+  })
 })
