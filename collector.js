@@ -20,6 +20,17 @@ Collector.prototype = {
     }.bind(this))
   },
 
+  sell: function(shop,recordToRemove){
+    this.library.forEach(function(record){
+      if (record.name === recordToRemove.name){
+        this.money += recordToRemove.price
+        shop.balance -= recordToRemove.price
+        shop.add(recordToRemove)
+        this.remove(recordToRemove)
+      }
+    }.bind(this))
+  }
+
 }
 
 module.exports = Collector
