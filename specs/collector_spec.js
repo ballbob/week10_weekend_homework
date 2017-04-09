@@ -63,4 +63,11 @@ describe('Collector',function(){
 
     assert.strictEqual(12,jimmy.libraryValue())
   })
+
+  it('should be able to view the total value of a multi-record collection',function(){
+    jimmy.add(istanbul)
+    jimmy.add(strangeLove)
+
+    assert.strictEqual(24,jimmy.libraryValue())
+  })
 })
