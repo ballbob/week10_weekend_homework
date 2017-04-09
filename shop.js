@@ -11,12 +11,20 @@ Shop.prototype = {
   },
 
   remove: function(discToRemove){
-    this.discs.forEach(function(record){
-      if (record.name === discToRemove.name){
-        var recordIndex = this.discs.indexOf(record)
+    // this.discs.forEach(function(record){
+    //   if (record.name === discToRemove.name){
+        // var recordIndex = this.discs.indexOf(record)
+        // this.discs.splice(recordIndex,1)
+    //   }
+    // }.bind(this))
+    //problems with selling to the customer app likely due to forEach not having a built-in break function. I am using a for loop instead.
+
+    for (var i = 0; i < this.discs.length; i++){
+      if(this.discs[i].name === discToRemove.name){
+        var recordIndex = i
         this.discs.splice(recordIndex,1)
       }
-    }.bind(this))
+    }
   },
 
   printNameAndCity: function(){
