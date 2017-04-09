@@ -49,7 +49,7 @@ Collector.prototype = {
     return value
   },
 
-  mostValuableRecord: function(){
+  sortByValue: function(){
     this.library.sort(function(a,b){
       aPrice = a.price
       bPrice = b.price 
@@ -61,6 +61,10 @@ Collector.prototype = {
       }
       return 0
     })
+  },
+
+  mostValuableRecord: function(){
+    this.sortByValue()
     return this.library[0]
   }
 
