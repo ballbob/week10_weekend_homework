@@ -44,17 +44,17 @@ Shop.prototype = {
   },
 
   sell: function(recordToSell,customer){
-    var funds = customer.displayMoney
+    var funds = customer.money
     if (funds < recordToSell.price){
       return "Insufficient funds."
     }
     this.discs.forEach(function(record){
       if (record.name === recordToSell.name){
         this.balance += recordToSell.price
+        customer.add(recordToSell)
+        this.remove(recordToSell)
       }
     }.bind(this))
-    customer.add(recordToSell)
-    this.remove(recordToSell)
   },
 
   inventoryValue: function(){

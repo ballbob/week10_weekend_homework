@@ -49,5 +49,4 @@ describe('Collector',function(){
     assert.strictEqual(undefined,jimmy.library[0])
   })
 
-
 })

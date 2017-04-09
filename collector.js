@@ -10,7 +10,6 @@ Collector.prototype = {
     this.money -= record.price
   },
 
-
   remove: function(recordToRemove){
     this.library.forEach(function(record){
       if (record.name === recordToRemove.name){
