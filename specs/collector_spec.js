@@ -57,4 +57,10 @@ describe('Collector',function(){
     assert.strictEqual(88,theSingingCricket.balance)
     assert.strictEqual(undefined,jimmy.library[0])
   })
+
+  it('should be able to view the total value of its collection',function(){
+    jimmy.add(istanbul)
+
+    assert.strictEqual(12,jimmy.libraryValue())
+  })
 })
