@@ -1,6 +1,7 @@
 var assert=require('assert')
 var Record = require('../record.js')
 var Shop = require('../shop.js')
+var Collector = require('../collector.js')
 
 describe('Record Store',function(){
 
@@ -11,6 +12,8 @@ describe('Record Store',function(){
   var theSingingCricket
 
   beforeEach(function(){
+
+    jimmy = new Collector('Jimmy',30)
 
     strangeLove = new Record('StrangeLove','Depeche Mode','Electronic',12)
     personalJesus = new Record('Personal Jesus', 'Depeche Mode', 'Electronic', 12)
@@ -74,9 +77,11 @@ describe('Record Store',function(){
 
   it('should be able to sell a record',function(){
     theSingingCricket.add(strangeLove)
-    theSingingCricket.sell(strangeLove)
+    theSingingCricket.sell(strangeLove,jimmy)
 
     assert.strictEqual(112,theSingingCricket.balance)
+    assert.strictEqual(strangeLove,jimmy.library[0])
+    assert.strictEqual(18,jimmy.money)
   })
 
   it('should be able to display the value of the inventory with no items',function(){
@@ -116,5 +121,4 @@ describe('Record Store',function(){
 
     assert.equal("'The Jubilee' by Mary Chapin Carpenter. Genre: Folk. Price: 10. ", theSingingCricket.genre('Folk'))
   })
-
 })

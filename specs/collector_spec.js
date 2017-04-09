@@ -39,6 +39,7 @@ describe('Collector',function(){
     jimmy.add(istanbul)
 
     assert.strictEqual(istanbul,jimmy.library[0])
+    assert.strictEqual(18,jimmy.money)
   })
 
   it('should be able to remove a record',function(){

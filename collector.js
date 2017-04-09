@@ -7,6 +7,7 @@ var Collector = function(name, money){
 Collector.prototype = {
   add: function(record){
     this.library.push(record)
+    this.money -= record.price
   },
 
   remove: function(recordToRemove){
@@ -19,18 +20,13 @@ Collector.prototype = {
     }.bind(this))
   },
 
-  buy: function(shop,record){
+  // buy: function(shop,record){
 
-    console.log(shop.balance)
-    console.log(shop.printInventory())
-    
-    this.add(record)
-    this.money -= record.price
-    shop.sell(record)
-    
-    console.log(shop.balance)
-    console.log(shop.printInventory())
-  }
+  //   this.add(record)
+  //   this.money -= record.price
+  //   shop.sell(record)
+  
+  // }
 }
 
 module.exports = Collector

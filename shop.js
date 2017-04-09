@@ -43,12 +43,13 @@ Shop.prototype = {
     }
   },
 
-  sell: function(recordToSell){
+  sell: function(recordToSell,customer){
     this.discs.forEach(function(record){
       if (record.name === recordToSell.name){
         this.balance += recordToSell.price
       }
     }.bind(this))
+    customer.add(recordToSell)
     this.remove(recordToSell)
   },
 
