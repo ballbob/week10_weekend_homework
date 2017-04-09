@@ -49,7 +49,5 @@ describe('Collector',function(){
     assert.strictEqual(undefined,jimmy.library[0])
   })
 
-  it('should be able to display its money',function(){
-    assert.strictEqual(30,jimmy.displayMoney())
-  })
+
 })

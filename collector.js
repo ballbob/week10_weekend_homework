@@ -10,9 +10,6 @@ Collector.prototype = {
     this.money -= record.price
   },
 
-  displayMoney: function(){
-    return this.money
-  },
 
   remove: function(recordToRemove){
     this.library.forEach(function(record){

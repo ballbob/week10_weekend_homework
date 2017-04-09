@@ -88,7 +88,7 @@ describe('Record Store',function(){
     jammy = new Collector('Jammy',0)
 
     theSingingCricket.add(theJubilee)
-    theSingingCricket.sell(customer,theJubilee)
+    theSingingCricket.sell(jammy,theJubilee)
 
     assert.strictEqual(100,theSingingCricket.balance)
     assert.strictEqual(undefined,jammy.library[0])
