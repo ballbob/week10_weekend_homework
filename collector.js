@@ -37,6 +37,16 @@ Collector.prototype = {
       value += record.price
     })
     return value
+  },
+
+  genreValue: function(genre){
+    value = 0
+    this.library.forEach(function(record){
+      if(record.genre === genre){
+        value += record.price
+      }
+    })
+    return value
   }
 
 }

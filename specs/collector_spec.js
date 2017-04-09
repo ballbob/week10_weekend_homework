@@ -75,6 +75,6 @@ describe('Collector',function(){
     jimmy.add(istanbul)
     jimmy.add(strangeLove)
 
-    assert.strictEqual(12,jimmy.genreValue(electronic))
+    assert.strictEqual(12,jimmy.genreValue('Electronic'))
   })
 })
