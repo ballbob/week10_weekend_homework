@@ -84,6 +84,17 @@ describe('Record Store',function(){
     assert.strictEqual(18,jimmy.money)
   })
 
+  it('should refuse a sale if the customer cannot afford the record',function(){
+    jammy = new Collector('Jammy',0)
+
+    theSingingCricket.add(theJubilee)
+    theSingingCricket.sell(customer,theJubilee)
+
+    assert.strictEqual(100,theSingingCricket.balance)
+    assert.strictEqual(undefined,jammy.library[0])
+    assert.strictEqual(00,jammy.money)
+  })
+
   it('should be able to display the value of the inventory with no items',function(){
     assert.strictEqual("Inventory value: 0.",theSingingCricket.inventoryValue())
 
