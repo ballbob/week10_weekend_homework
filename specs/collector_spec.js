@@ -70,4 +70,11 @@ describe('Collector',function(){
 
     assert.strictEqual(24,jimmy.libraryValue())
   })
+
+  it('should be able to show the value of all records of a certain genre',function(){
+    jimmy.add(istanbul)
+    jimmy.add(strangeLove)
+
+    assert.strictEqual(12,jimmy.genreValue(electronic))
+  })
 })
