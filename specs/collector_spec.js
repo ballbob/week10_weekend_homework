@@ -49,23 +49,7 @@ describe('Collector',function(){
     assert.strictEqual(undefined,jimmy.library[0])
   })
 
-  // it('should display a record in its inventory on buying from a shop',function(){
-  //   jimmy.buy(theSingingCricket,theJubilee)
-  //   assert.strictEqual(theJubilee,jimmy.library[0])
-  // })
-
-  // it('should lose the price of the record from its money on buying it',function(){
-  //   jimmy.buy(theSingingCricket,theJubilee)
-  //   assert.strictEqual(20,jimmy.money)
-  // })
-
-  // it('should have removed the record from the shop when buying',function(){
-  //   jimmy.buy(theSingingCricket,theJubilee)
-  //   assert.strictEqual(3,theSingingCricket.discs.length)
-  // })
-
-  // it('should give the price of the record to the shop when buying',function(){
-  //   jimmy.buy(theSingingCricket,theJubilee)
-  //   assert.strictEqual(110,theSingingCricket.balance)
-  // })
+  it('should be able to display its money',function(){
+    assert.strictEqual(30,jimmy.displayMoney())
+  })
 })
