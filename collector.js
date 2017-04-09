@@ -47,6 +47,21 @@ Collector.prototype = {
       }
     })
     return value
+  },
+
+  mostValuableRecord: function(){
+    this.library.sort(function(a,b){
+      aPrice = a.price
+      bPrice = b.price 
+      if(aPrice > bPrice){
+        return -1
+      }
+      if(aPrice < bPrice){
+        return 1
+      }
+      return 0
+    })
+    return this.library[0]
   }
 
 }
