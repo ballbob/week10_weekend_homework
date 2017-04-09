@@ -19,6 +19,7 @@ Collector.prototype = {
       }
     }.bind(this))
   },
+
 }
 
 module.exports = Collector

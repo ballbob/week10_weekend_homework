@@ -49,4 +49,12 @@ describe('Collector',function(){
     assert.strictEqual(undefined,jimmy.library[0])
   })
 
+  it('should be able to sell a record to a shop',function(){
+    jimmy.add(istanbul)
+    jimmy.sell(theSingingCricket,istanbul)
+
+    assert.strictEqual(30,jimmy.money)
+    assert.strictEqual(88,theSingingCricket.balance)
+    assert.strictEqual(undefined,jimmy.library[0])
+  })
 })
